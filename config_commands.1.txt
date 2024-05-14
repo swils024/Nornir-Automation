@@ -1,0 +1,14 @@
+aaa new-model
+aaa authentication login default local 
+aaa authorization exec default local
+enable secret cisco
+parser view restricted
+secret restpass
+commands exec include all show ip 
+commands exec include show version
+commands exec include show
+commands exec include logout
+commands exec include terminal length 0
+command exec include terminal width 512
+no username nocuser view restricted priv 15 secret nocpass 
+username nocuser privilege 15 view restricted password 0 nocpass

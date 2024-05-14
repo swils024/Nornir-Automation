@@ -1,0 +1,12 @@
+---
+inventory:
+    plugin: 'SimpleInventory'
+    options:
+        host_file: '/home/swils024/Documents/adv_automation/Nornir-Automation/hosts.yaml'
+        group_file: '/home/swils024/Documents/adv_automation/Nornir-Automation/groups.yaml'
+        defaults_file: '/home/swils024/Documents/adv_automation/Nornir-Automation/defaults.yaml'
+
+runner:
+    plugin: 'threaded'
+    options:
+        num_workers: 5

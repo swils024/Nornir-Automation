@@ -1,0 +1,4 @@
+show ntp associations
+show ntp status
+show ntp config
+show version | include uptime

@@ -1,0 +1,32 @@
+---
+MGMT-196:
+    hostname: '192.168.1.196'
+    username: 'john'
+    password: 'demo'
+    data:
+        ntp_server: '85.199.214.99'
+
+vIOS-197:
+    hostname: '192.168.1.197'
+    groups:
+        - euro_group
+
+vIOS-198:
+    hostname: '192.168.1.198'
+    groups:
+        - usa_group
+
+vIOS-199:
+    hostname: '192.168.1.199' 
+    groups:
+        - euro_group
+
+vIOS-200:
+    hostname: '192.168.1.200'
+    groups:
+        - usa_group
+
+vIOS-201:
+    hostname: '192.168.1.201'
+    username: 'john'
+    password: 'demo'
