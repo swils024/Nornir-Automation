@@ -1,0 +1,18 @@
+no event manager applet ssh_check authorization bypass
+!
+event manager applet ssh_check authorization bypass
+!
+event timer cron cron-entry "@reboot"
+!
+action 0010 cli command "enable"
+action 0020 cli command "show crypto key mypubkey rsa | i Key name:"
+action 0030 regexp ".*Key name: sshkey\r" $_cli_result
+action 0040 if $_regexp_result eq 0
+action 0050 cli command "config t"
+action 0060 cli command "crypto key generate rsa label sshkey modulus 2048 general-keys"
+action 0070 cli command "ip ssh rsa keypair-name sshkey"
+action 0080 cli command "end"
+action 0090 cli command "copy running-config startup-config"
+action 0100 end
+!
+!
